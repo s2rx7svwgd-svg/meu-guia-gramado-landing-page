@@ -7,7 +7,7 @@ import { ChevronDown } from "lucide-react";
  */
 
 export default function Home() {
-  const CHECKOUT_URL = "/checkout"; // TROCAR pela URL real do checkout
+  const CHECKOUT_URL = "https://pay.hotmart.com/V105306779Q"; // TROCAR pela URL real do checkout
 
   const handleCheckout = () => {
     window.location.href = CHECKOUT_URL;
