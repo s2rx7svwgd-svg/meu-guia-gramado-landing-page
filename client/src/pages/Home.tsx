@@ -9,10 +9,6 @@ import { ChevronDown } from "lucide-react";
 export default function Home() {
   const CHECKOUT_URL = "https://pay.hotmart.com/V105306779Q"; // TROCAR pela URL real do checkout
 
-  const handleCheckout = () => {
-    window.location.href = CHECKOUT_URL;
-  };
-
   const handleSeeInside = () => {
     document.getElementById("preview")?.scrollIntoView({
       behavior: "smooth",
@@ -68,10 +64,10 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 mb-4">
               <Button
                 size="lg"
-                onClick={handleCheckout}
+                asChild
                 className="bg-accent hover:bg-accent/90 text-white font-semibold text-base px-8 py-6"
               >
-                Quero receber o guia agora
+                <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">Quero receber o guia agora</a>
               </Button>
 
               <Button
@@ -560,10 +556,10 @@ export default function Home() {
 
             <Button
               size="lg"
-              onClick={handleCheckout}
+              asChild
               className="bg-accent hover:bg-accent/90 text-white font-semibold text-base px-8 py-6 mb-12"
             >
-              Quero receber o Meu Guia Gramado
+              <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">Quero receber o Meu Guia Gramado</a>
             </Button>
 
             <p className="text-lg text-foreground/80 leading-relaxed font-serif">
@@ -580,10 +576,10 @@ export default function Home() {
           <div className="text-center">
             <Button
               size="lg"
-              onClick={handleCheckout}
+              asChild
               className="bg-accent hover:bg-accent/90 text-white font-semibold text-base px-8 py-6 mb-8"
             >
-              Quero receber o guia agora
+              <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">Quero receber o guia agora</a>
             </Button>
             <p className="text-sm text-white/70 font-serif">
               © 2026 Meu Guia Gramado. Todos os direitos reservados.
