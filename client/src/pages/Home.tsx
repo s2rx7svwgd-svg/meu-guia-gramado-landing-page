@@ -9,9 +9,16 @@ import { ChevronDown } from "lucide-react";
 export default function Home() {
   const CHECKOUT_URL = "https://pay.hotmart.com/V105306779Q"; // TROCAR pela URL real do checkout
 
-  const handleCheckout = () => {
-    window.location.href = CHECKOUT_URL;
-  };
+
+  const previewPages = [
+    { src: "/previews/01-capa-proposta.png", caption: "A proposta do guia" },
+    { src: "/previews/02-como-usar.png", caption: "Como usar na prática" },
+    { src: "/previews/03-indice-por-momento.png", caption: "Escolha por momento da viagem" },
+    { src: "/previews/04-jantar-a-dois.png", caption: "Opções para jantar a dois" },
+    { src: "/previews/05-familia.png", caption: "Escolhas para família" },
+    { src: "/previews/06-fondue.png", caption: "Fondue em Gramado" },
+    { src: "/previews/07-cafes-brunch.png", caption: "Cafés e brunch" },
+  ];
 
   const handleSeeInside = () => {
     document.getElementById("preview")?.scrollIntoView({
@@ -68,10 +75,10 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 mb-4">
               <Button
                 size="lg"
-                onClick={handleCheckout}
+                asChild
                 className="bg-accent hover:bg-accent/90 text-white font-semibold text-base px-8 py-6"
               >
-                Quero receber o guia agora
+                <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">Quero receber o guia agora</a>
               </Button>
 
               <Button
@@ -208,44 +215,48 @@ export default function Home() {
       </section>
 
       {/* Preview Section */}
-      <section id="preview" className="py-20 md:py-28 bg-background">
+      <section id="preview" className="py-20 md:py-28 bg-gradient-to-b from-white to-background">
         <div className="container mx-auto px-4 md:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
-              Veja como o guia facilita a escolha
+          <div className="max-w-6xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+              Ver por dentro do guia
             </h2>
 
-            <p className="text-lg text-foreground/80 mb-6 leading-relaxed font-serif">
-              O conteúdo foi estruturado para ser fácil de navegar no celular e
-              direto ao ponto.
+            <p className="text-lg text-foreground/80 mb-12 leading-relaxed font-serif max-w-4xl mx-auto">
+              Veja como o conteúdo é organizado para ajudar você a escolher onde comer em Gramado e Canela com mais rapidez, clareza e segurança.
             </p>
 
-            <p className="text-lg text-foreground/80 mb-12 leading-relaxed font-serif">
-              Em vez de uma lista longa e cansativa, você acessa uma curadoria
-              organizada para encontrar com mais rapidez o tipo de experiência que
-              procura naquele momento.
-            </p>
-
-            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-              {[
-                "Estrutura simples",
-                "Consulta rápida",
-                "Categorias fáceis de entender",
-                "Melhor leitura durante a viagem",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="p-4 bg-white rounded-lg border border-border/50"
-                >
-                  <p className="text-foreground/80 font-serif">{item}</p>
-                </div>
-              ))}
+            <div className="relative">
+              <div className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                {previewPages.map((item) => (
+                  <figure
+                    key={item.src}
+                    className="snap-start shrink-0 basis-[88%] sm:basis-[48%] lg:basis-[31.5%] rounded-2xl border border-border/60 bg-card p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                  >
+                    <div className="overflow-hidden rounded-xl bg-muted">
+                      <img
+                        src={item.src}
+                        alt={item.caption}
+                        loading="lazy"
+                        className="w-full h-auto object-contain transition-transform duration-500 hover:scale-[1.02]"
+                      />
+                    </div>
+                    <figcaption className="text-sm text-foreground/80 font-serif mt-3 text-left">
+                      {item.caption}
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
             </div>
 
-            <p className="text-sm text-foreground/60 font-serif">
-              Substitua esta área por prints reais do PDF, do sumário e de algumas
-              páginas internas.
-            </p>
+            <div className="mt-10">
+              <a
+                href="#checkout"
+                className="inline-flex items-center justify-center text-accent font-semibold hover:text-accent/80 transition-colors"
+              >
+                Quero acessar o guia completo
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -537,7 +548,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 md:py-28 bg-background">
+      <section id="checkout" className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-4 md:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
@@ -560,10 +571,10 @@ export default function Home() {
 
             <Button
               size="lg"
-              onClick={handleCheckout}
+              asChild
               className="bg-accent hover:bg-accent/90 text-white font-semibold text-base px-8 py-6 mb-12"
             >
-              Quero receber o Meu Guia Gramado
+              <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">Quero receber o Meu Guia Gramado</a>
             </Button>
 
             <p className="text-lg text-foreground/80 leading-relaxed font-serif">
@@ -580,10 +591,10 @@ export default function Home() {
           <div className="text-center">
             <Button
               size="lg"
-              onClick={handleCheckout}
+              asChild
               className="bg-accent hover:bg-accent/90 text-white font-semibold text-base px-8 py-6 mb-8"
             >
-              Quero receber o guia agora
+              <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">Quero receber o guia agora</a>
             </Button>
             <p className="text-sm text-white/70 font-serif">
               © 2026 Meu Guia Gramado. Todos os direitos reservados.
