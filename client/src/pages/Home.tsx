@@ -8,7 +8,8 @@ import { ChevronDown } from "lucide-react";
 
 export default function Home() {
   const CHECKOUT_URL = "https://pay.hotmart.com/V105306779Q"; // TROCAR pela URL real do checkout
-
+  const PREVIEW_FALLBACK =
+    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='1300'%3E%3Crect width='100%25' height='100%25' fill='%23f4efe5'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23644f38' font-size='30' font-family='Georgia,serif'%3EPrévia do guia%3C/text%3E%3C/svg%3E";
 
   const previewPages = [
     { src: "/previews/01-capa-proposta.png", caption: "A proposta do guia" },
@@ -231,14 +232,17 @@ export default function Home() {
                 {previewPages.map((item) => (
                   <figure
                     key={item.src}
-                    className="snap-start shrink-0 basis-[88%] sm:basis-[48%] lg:basis-[31.5%] rounded-2xl border border-border/60 bg-card p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    className="group snap-start shrink-0 basis-[88%] sm:basis-[48%] lg:basis-[31.5%] rounded-2xl border border-border/60 bg-card p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                   >
                     <div className="overflow-hidden rounded-xl bg-muted">
                       <img
                         src={item.src}
                         alt={item.caption}
                         loading="lazy"
-                        className="w-full h-auto object-contain transition-transform duration-500 hover:scale-[1.02]"
+                        className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+                        onError={(event) => {
+                          event.currentTarget.src = PREVIEW_FALLBACK;
+                        }}
                       />
                     </div>
                     <figcaption className="text-sm text-foreground/80 font-serif mt-3 text-left">
