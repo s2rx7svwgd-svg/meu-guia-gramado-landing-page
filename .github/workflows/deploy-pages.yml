@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - principais
   workflow_dispatch:
 
 permissions:
@@ -28,17 +29,17 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: pnpm
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
-      - name: Build
-        run: pnpm build
+      - name: Build static Vite site
+        run: pnpm build:client
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -50,6 +51,8 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
