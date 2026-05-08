@@ -8,17 +8,39 @@ import { ChevronDown } from "lucide-react";
 
 export default function Home() {
   const CHECKOUT_URL = "https://pay.hotmart.com/V105306779Q"; // TROCAR pela URL real do checkout
-  const PREVIEW_FALLBACK =
-    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='1300'%3E%3Crect width='100%25' height='100%25' fill='%23f4efe5'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23644f38' font-size='30' font-family='Georgia,serif'%3EPrévia do guia%3C/text%3E%3C/svg%3E";
+  const previewBaseUrl = import.meta.env.BASE_URL;
 
   const previewPages = [
-    { src: "/previews/01-capa-proposta.png", caption: "A proposta do guia" },
-    { src: "/previews/02-como-usar.png", caption: "Como usar na prática" },
-    { src: "/previews/03-indice-por-momento.png", caption: "Escolha por momento da viagem" },
-    { src: "/previews/04-jantar-a-dois.png", caption: "Opções para jantar a dois" },
-    { src: "/previews/05-familia.png", caption: "Escolhas para família" },
-    { src: "/previews/06-fondue.png", caption: "Fondue em Gramado" },
-    { src: "/previews/07-cafes-brunch.png", caption: "Cafés e brunch" },
+    {
+      src: `${previewBaseUrl}previews/01-capa-proposta.svg`,
+      caption: "A proposta do guia",
+      alt: "Capa do PDF Meu Guia Gramado com a proposta da curadoria gastronômica",
+    },
+    {
+      src: `${previewBaseUrl}previews/02-como-usar.svg`,
+      caption: "Como usar na prática",
+      alt: "Página do guia explicando como consultar a curadoria durante a viagem",
+    },
+    {
+      src: `${previewBaseUrl}previews/03-indice-por-momento.svg`,
+      caption: "Escolha por momento da viagem",
+      alt: "Índice do guia organizado por momentos como jantar, família, fondue e cafés",
+    },
+    {
+      src: `${previewBaseUrl}previews/04-jantar-a-dois.svg`,
+      caption: "Opções para jantar a dois",
+      alt: "Página interna do guia com seleção de restaurantes para jantar a dois",
+    },
+    {
+      src: `${previewBaseUrl}previews/05-familia.svg`,
+      caption: "Escolhas para família",
+      alt: "Página interna do guia com escolhas para famílias e grupos",
+    },
+    {
+      src: `${previewBaseUrl}previews/06-fondue.svg`,
+      caption: "Fondue em Gramado",
+      alt: "Página interna do guia com opções de fondue em Gramado",
+    },
   ];
 
   const handleSeeInside = () => {
@@ -45,13 +67,14 @@ export default function Home() {
         <div className="relative z-10 container mx-auto px-4 md:px-8">
           <div className="max-w-2xl">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground leading-tight">
-              Escolha onde comer em Gramado e Canela sem perder horas pesquisando.
+              Escolha onde comer em Gramado e Canela sem perder horas
+              pesquisando.
             </h1>
 
             <p className="text-lg md:text-xl text-foreground/90 mb-8 leading-relaxed font-serif">
-              Um guia digital com curadoria organizada por ocasião para você decidir
-              mais rápido entre restaurantes, cafés e chocolaterias, direto do
-              celular, ao longo da viagem.
+              Um guia digital com curadoria organizada por ocasião para você
+              decidir mais rápido entre restaurantes, cafés e chocolaterias,
+              direto do celular, ao longo da viagem.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-3 mb-10 max-w-xl">
@@ -60,7 +83,7 @@ export default function Home() {
                 "Opções de Gramado e Canela",
                 "Organizado por momento da viagem",
                 "Acesso imediato após a compra",
-              ].map((item) => (
+              ].map(item => (
                 <div
                   key={item}
                   className="flex items-center gap-3 rounded-lg bg-white/70 backdrop-blur-sm px-4 py-3 border border-border/40"
@@ -79,7 +102,13 @@ export default function Home() {
                 asChild
                 className="bg-accent hover:bg-accent/90 text-white font-semibold text-base px-8 py-6"
               >
-                <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">Quero receber o guia agora</a>
+                <a
+                  href={CHECKOUT_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Quero receber o guia agora
+                </a>
               </Button>
 
               <Button
@@ -109,19 +138,19 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
-              O problema não é faltar opção. É perder tempo tentando descobrir qual
-              delas faz sentido agora.
+              O problema não é faltar opção. É perder tempo tentando descobrir
+              qual delas faz sentido agora.
             </h2>
 
             <p className="text-lg text-foreground/80 mb-6 leading-relaxed font-serif">
-              Em Gramado e Canela, existem muitas opções para comer bem. E justamente
-              por isso decidir nem sempre é simples.
+              Em Gramado e Canela, existem muitas opções para comer bem. E
+              justamente por isso decidir nem sempre é simples.
             </p>
 
             <p className="text-lg text-foreground/80 mb-6 leading-relaxed font-serif">
-              Na prática, muita gente faz sempre a mesma coisa: abre Google, abre
-              Instagram, compara avaliações, salva lugares, vê listas genéricas e,
-              mesmo assim, continua sem clareza na hora de sair.
+              Na prática, muita gente faz sempre a mesma coisa: abre Google,
+              abre Instagram, compara avaliações, salva lugares, vê listas
+              genéricas e, mesmo assim, continua sem clareza na hora de sair.
             </p>
 
             <p className="text-lg text-foreground/80 mb-6 leading-relaxed font-serif">
@@ -149,9 +178,9 @@ export default function Home() {
             </h2>
 
             <p className="text-lg text-foreground/80 mb-6 leading-relaxed font-serif">
-              Em vez de começar a busca do zero a cada refeição, você consulta um
-              material já organizado por ocasião e encontra com mais rapidez o tipo
-              de lugar que combina com aquele momento da viagem.
+              Em vez de começar a busca do zero a cada refeição, você consulta
+              um material já organizado por ocasião e encontra com mais rapidez
+              o tipo de lugar que combina com aquele momento da viagem.
             </p>
 
             <p className="text-lg text-foreground/80 mb-6 leading-relaxed font-serif">
@@ -159,12 +188,13 @@ export default function Home() {
             </p>
 
             <p className="text-lg text-foreground/80 mb-6 leading-relaxed font-serif">
-              A proposta é <strong>facilitar sua escolha</strong> com uma curadoria
-              mais prática, clara e simples de consultar no celular.
+              A proposta é <strong>facilitar sua escolha</strong> com uma
+              curadoria mais prática, clara e simples de consultar no celular.
             </p>
 
             <p className="text-lg text-foreground/80 leading-relaxed font-serif">
-              Menos pesquisa solta. Menos indecisão. Mais clareza na hora de escolher.
+              Menos pesquisa solta. Menos indecisão. Mais clareza na hora de
+              escolher.
             </p>
           </div>
         </div>
@@ -194,7 +224,7 @@ export default function Home() {
                 "Organização por ocasião e momento da viagem",
                 "Leitura simples no celular",
                 "Acesso imediato após a compra",
-              ].map((item) => (
+              ].map(item => (
                 <div key={item} className="flex gap-3">
                   <div className="flex-shrink-0 mt-1">
                     <div className="w-2 h-2 rounded-full bg-accent"></div>
@@ -205,9 +235,9 @@ export default function Home() {
 
               <div className="pt-4 border-t border-border/50">
                 <p className="text-foreground/80 font-serif">
-                  Você recebe um material pensado para consulta rápida, sem precisar
-                  passar por uma sequência confusa de buscas soltas sempre que quiser
-                  decidir onde comer.
+                  Você recebe um material pensado para consulta rápida, sem
+                  precisar passar por uma sequência confusa de buscas soltas
+                  sempre que quiser decidir onde comer.
                 </p>
               </div>
             </div>
@@ -216,50 +246,61 @@ export default function Home() {
       </section>
 
       {/* Preview Section */}
-      <section id="preview" className="py-20 md:py-28 bg-gradient-to-b from-white to-background">
+      <section
+        id="preview"
+        className="py-20 md:py-28 bg-gradient-to-b from-white to-background"
+      >
         <div className="container mx-auto px-4 md:px-8">
-          <div className="max-w-6xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-              Ver por dentro do guia
-            </h2>
+          <div className="max-w-6xl mx-auto">
+            <div className="max-w-4xl mx-auto text-center mb-12">
+              <span className="inline-flex items-center rounded-full border border-accent/30 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-widest text-accent mb-5">
+                Prévia real do PDF
+              </span>
 
-            <p className="text-lg text-foreground/80 mb-12 leading-relaxed font-serif max-w-4xl mx-auto">
-              Veja como o conteúdo é organizado para ajudar você a escolher onde comer em Gramado e Canela com mais rapidez, clareza e segurança.
-            </p>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+                Veja por dentro do guia
+              </h2>
 
-            <div className="relative">
-              <div className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-                {previewPages.map((item) => (
-                  <figure
-                    key={item.src}
-                    className="group snap-start shrink-0 basis-[88%] sm:basis-[48%] lg:basis-[31.5%] rounded-2xl border border-border/60 bg-card p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-                  >
-                    <div className="overflow-hidden rounded-xl bg-muted">
-                      <img
-                        src={item.src}
-                        alt={item.caption}
-                        loading="lazy"
-                        className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
-                        onError={(event) => {
-                          event.currentTarget.src = PREVIEW_FALLBACK;
-                        }}
-                      />
-                    </div>
-                    <figcaption className="text-sm text-foreground/80 font-serif mt-3 text-left">
-                      {item.caption}
-                    </figcaption>
-                  </figure>
-                ))}
-              </div>
+              <p className="text-lg text-foreground/80 leading-relaxed font-serif">
+                Um material prático, direto e pensado para consulta no celular
+                durante a viagem — com capa, índice por momento e páginas
+                internas da curadoria.
+              </p>
             </div>
 
-            <div className="mt-10">
-              <a
-                href="#checkout"
-                className="inline-flex items-center justify-center text-accent font-semibold hover:text-accent/80 transition-colors"
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {previewPages.map(item => (
+                <figure
+                  key={item.src}
+                  className="group rounded-2xl border border-border/60 bg-white p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl"
+                >
+                  <div className="aspect-[9/13] overflow-hidden rounded-xl bg-background">
+                    <img
+                      src={item.src}
+                      alt={item.alt}
+                      loading="lazy"
+                      className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.025]"
+                    />
+                  </div>
+                  <figcaption className="mt-4 flex items-center justify-between gap-3 text-left">
+                    <span className="text-sm font-semibold text-foreground">
+                      {item.caption}
+                    </span>
+                    <span className="h-1.5 w-1.5 rounded-full bg-accent"></span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+
+            <div className="mt-10 text-center">
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-2 border-accent text-accent hover:bg-accent/5 font-semibold text-base px-8 py-6"
               >
-                Quero acessar o guia completo
-              </a>
+                <a href="#checkout">Quero acessar o guia completo</a>
+              </Button>
             </div>
           </div>
         </div>
@@ -274,13 +315,13 @@ export default function Home() {
 
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-foreground/80 mb-6 font-serif">
-              Você não precisa passar por uma sequência solta de sugestões tentando
-              adivinhar o que faz sentido para cada ocasião.
+              Você não precisa passar por uma sequência solta de sugestões
+              tentando adivinhar o que faz sentido para cada ocasião.
             </p>
 
             <p className="text-lg text-foreground/80 mb-12 font-serif">
-              O guia foi organizado por tipos de experiência e momentos da viagem,
-              como:
+              O guia foi organizado por tipos de experiência e momentos da
+              viagem, como:
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -295,7 +336,7 @@ export default function Home() {
                 "Confeitarias e sobremesas",
                 "Chocolaterias",
                 "Bares e noite",
-              ].map((section) => (
+              ].map(section => (
                 <div
                   key={section}
                   className="flex items-center gap-3 p-4 bg-background rounded-lg border border-border/50 hover:border-accent/30 transition-colors"
@@ -307,8 +348,8 @@ export default function Home() {
             </div>
 
             <p className="text-lg text-foreground/80 font-serif">
-              Assim, a escolha fica mais simples conforme o que faz sentido naquele
-              momento.
+              Assim, a escolha fica mais simples conforme o que faz sentido
+              naquele momento.
             </p>
           </div>
         </div>
@@ -337,7 +378,7 @@ export default function Home() {
                 "Consulta uma seleção já organizada no celular",
                 "Escolhe com mais clareza entre Gramado e Canela",
                 "Decide com mais rapidez conforme o momento da viagem",
-              ].map((item) => (
+              ].map(item => (
                 <div key={item} className="flex gap-3">
                   <div className="flex-shrink-0 mt-1">
                     <div className="w-2 h-2 rounded-full bg-accent"></div>
@@ -366,12 +407,13 @@ export default function Home() {
             </h2>
 
             <p className="text-lg text-foreground/80 mb-6 leading-relaxed font-serif">
-              O objetivo do Meu Guia Gramado não é reunir tudo o que existe na cidade.
+              O objetivo do Meu Guia Gramado não é reunir tudo o que existe na
+              cidade.
             </p>
 
             <p className="text-lg text-foreground/80 mb-6 leading-relaxed font-serif">
-              O objetivo é ajudar você a decidir melhor, com menos dúvida e menos
-              tempo perdido em pesquisas dispersas.
+              O objetivo é ajudar você a decidir melhor, com menos dúvida e
+              menos tempo perdido em pesquisas dispersas.
             </p>
 
             <p className="text-lg text-foreground/80 leading-relaxed font-serif">
@@ -401,7 +443,9 @@ export default function Home() {
                 key={index}
                 className="p-6 bg-white rounded-lg border border-border/50 hover:border-accent/30 transition-colors"
               >
-                <h3 className="text-lg font-semibold text-foreground">{item}</h3>
+                <h3 className="text-lg font-semibold text-foreground">
+                  {item}
+                </h3>
               </div>
             ))}
           </div>
@@ -422,7 +466,7 @@ export default function Home() {
                 "Quer apenas uma lista enorme sem critério de organização",
                 "Não vê valor em curadoria",
                 "Espera que um guia substitua a confirmação final com o estabelecimento",
-              ].map((item) => (
+              ].map(item => (
                 <div
                   key={item}
                   className="flex items-start gap-3 p-5 bg-background rounded-lg border border-border/50"
@@ -435,8 +479,8 @@ export default function Home() {
 
             <p className="text-lg text-foreground/80 leading-relaxed font-serif text-center">
               A proposta aqui é economizar tempo e facilitar a decisão — não
-              substituir o bom senso na hora de confirmar detalhes diretamente com
-              cada local.
+              substituir o bom senso na hora de confirmar detalhes diretamente
+              com cada local.
             </p>
           </div>
         </div>
@@ -470,7 +514,7 @@ export default function Home() {
                   description:
                     "Você parte de uma curadoria já organizada, em vez de começar toda a busca do zero.",
                 },
-              ].map((item) => (
+              ].map(item => (
                 <div key={item.step} className="flex gap-6">
                   <div className="flex-shrink-0">
                     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent text-white font-bold text-lg">
@@ -508,13 +552,11 @@ export default function Home() {
               },
               {
                 question: "O conteúdo inclui só Gramado?",
-                answer:
-                  "Não. O material reúne opções de Gramado e Canela.",
+                answer: "Não. O material reúne opções de Gramado e Canela.",
               },
               {
                 question: "Preciso imprimir?",
-                answer:
-                  "Não. O guia foi pensado para uso no celular.",
+                answer: "Não. O guia foi pensado para uso no celular.",
               },
               {
                 question: "O que eu recebo ao comprar?",
@@ -556,13 +598,14 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
-              Se a ideia é aproveitar melhor a viagem sem perder tempo com pesquisa
-              solta, este guia foi feito para isso.
+              Se a ideia é aproveitar melhor a viagem sem perder tempo com
+              pesquisa solta, este guia foi feito para isso.
             </h2>
 
             <p className="text-lg text-foreground/80 mb-8 leading-relaxed font-serif">
-              Você recebe um material prático, organizado e fácil de consultar no
-              celular para decidir onde comer com mais rapidez em Gramado e Canela.
+              Você recebe um material prático, organizado e fácil de consultar
+              no celular para decidir onde comer com mais rapidez em Gramado e
+              Canela.
             </p>
 
             <p className="text-2xl font-bold text-accent mb-4">
@@ -578,12 +621,14 @@ export default function Home() {
               asChild
               className="bg-accent hover:bg-accent/90 text-white font-semibold text-base px-8 py-6 mb-12"
             >
-              <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">Quero receber o Meu Guia Gramado</a>
+              <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
+                Quero receber o Meu Guia Gramado
+              </a>
             </Button>
 
             <p className="text-lg text-foreground/80 leading-relaxed font-serif">
-              Menos dúvida, menos tempo perdido, mais clareza para decidir onde comer
-              durante a viagem.
+              Menos dúvida, menos tempo perdido, mais clareza para decidir onde
+              comer durante a viagem.
             </p>
           </div>
         </div>
@@ -598,7 +643,9 @@ export default function Home() {
               asChild
               className="bg-accent hover:bg-accent/90 text-white font-semibold text-base px-8 py-6 mb-8"
             >
-              <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">Quero receber o guia agora</a>
+              <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
+                Quero receber o guia agora
+              </a>
             </Button>
             <p className="text-sm text-white/70 font-serif">
               © 2026 Meu Guia Gramado. Todos os direitos reservados.

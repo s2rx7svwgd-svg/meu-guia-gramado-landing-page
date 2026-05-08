@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1300" viewBox="0 0 900 1300">
+  <rect width="100%" height="100%" fill="#f4efe5"/>
+  <rect x="32" y="32" width="836" height="1236" fill="none" stroke="#b69263" stroke-width="1.1"/>
+  <rect x="40" y="40" width="820" height="1220" fill="none" stroke="#b69263" stroke-width="0.7" opacity=".75"/>
+  
+  <line x1="210" y1="150" x2="690" y2="150" stroke="#b69263"/>
+  <text x="450" y="220" text-anchor="middle" font-family="Georgia, DejaVu Serif, serif" font-size="36" font-style="italic" font-weight="700" fill="#3d3021">Como usar este guia</text>
+  <line x1="210" y1="255" x2="690" y2="255" stroke="#b69263"/>
+  <text x="120" y="330" font-size="22" font-weight="700" font-style="normal" text-anchor="start" fill="#3d3021" font-family="Georgia, DejaVu Serif, serif">1. Escolha o momento</text>
+<text x="120" y="364" font-size="22" font-weight="700" font-style="normal" text-anchor="start" fill="#3d3021" font-family="Georgia, DejaVu Serif, serif">Comece pelo tipo de experiência que faz mais sentido agora:</text>
+<text x="120" y="398" font-size="22" font-weight="700" font-style="normal" text-anchor="start" fill="#3d3021" font-family="Georgia, DejaVu Serif, serif">jantar a dois, fondue, café, chocolate ou família.</text>
+  <text x="120" y="475" font-size="22" font-weight="700" font-style="normal" text-anchor="start" fill="#3d3021" font-family="Georgia, DejaVu Serif, serif">2. Consulte a curadoria</text>
+<text x="120" y="509" font-size="22" font-weight="700" font-style="normal" text-anchor="start" fill="#3d3021" font-family="Georgia, DejaVu Serif, serif">Cada seção reúne opções coerentes com esse momento,</text>
+<text x="120" y="543" font-size="22" font-weight="700" font-style="normal" text-anchor="start" fill="#3d3021" font-family="Georgia, DejaVu Serif, serif">com leitura direta e rápida no celular.</text>
+  <text x="120" y="620" font-size="22" font-weight="700" font-style="normal" text-anchor="start" fill="#3d3021" font-family="Georgia, DejaVu Serif, serif">3. Decida pelo deslocamento</text>
+<text x="120" y="654" font-size="22" font-weight="700" font-style="normal" text-anchor="start" fill="#3d3021" font-family="Georgia, DejaVu Serif, serif">Depois de filtrar pelo perfil, use o mapa ao final</text>
+<text x="120" y="688" font-size="22" font-weight="700" font-style="normal" text-anchor="start" fill="#3d3021" font-family="Georgia, DejaVu Serif, serif">para comparar localização e praticidade antes de escolher.</text>
+  <text x="450" y="1215" text-anchor="middle" font-family="Georgia, DejaVu Serif, serif" font-size="16" font-style="italic" fill="#7a5f46">Meu Guia Gramado · Curadoria Gastronômica</text>
+
+</svg>

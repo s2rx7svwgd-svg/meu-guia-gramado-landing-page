@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1300" viewBox="0 0 900 1300">
+  <rect width="100%" height="100%" fill="#f4efe5"/>
+  <rect x="32" y="32" width="836" height="1236" fill="none" stroke="#b69263" stroke-width="1.1"/>
+  <rect x="40" y="40" width="820" height="1220" fill="none" stroke="#b69263" stroke-width="0.7" opacity=".75"/>
+  
+  <text x="450" y="290" text-anchor="middle" font-family="Georgia, DejaVu Serif, serif" font-size="42" font-style="italic" font-weight="700" fill="#3d3021">Meu Guia</text>
+  <text x="450" y="375" text-anchor="middle" font-family="Georgia, DejaVu Serif, serif" font-size="72" font-style="italic" font-weight="700" fill="#3d3021">Gramado</text>
+  <line x1="260" y1="410" x2="640" y2="410" stroke="#b69263" stroke-width="1.3"/>
+  <text x="450" y="460" text-anchor="middle" font-family="Georgia, DejaVu Serif, serif" font-size="22" font-style="italic" fill="#7a5f46">Curadoria de restaurantes, cafés e chocolaterias</text>
+  <text x="450" y="492" text-anchor="middle" font-family="Georgia, DejaVu Serif, serif" font-size="22" font-style="italic" fill="#7a5f46">em Gramado e Canela</text>
+  <text x="450" y="600" text-anchor="middle" font-family="Georgia, DejaVu Serif, serif" font-size="24" font-style="italic" fill="#7a5f46">Uma curadoria prática para decidir onde comer</text>
+  <text x="450" y="635" text-anchor="middle" font-family="Georgia, DejaVu Serif, serif" font-size="24" font-style="italic" fill="#7a5f46">com mais rapidez e clareza durante a viagem.</text>
+  <text x="450" y="705" text-anchor="middle" font-family="Georgia, DejaVu Serif, serif" font-size="20" fill="#7a5f46">Listas por ocasião · Leitura rápida no celular · Mapa ao final</text>
+  <line x1="310" y1="980" x2="590" y2="980" stroke="#b69263"/>
+  <text x="450" y="1030" text-anchor="middle" font-family="Georgia, DejaVu Serif, serif" font-size="18" font-style="italic" fill="#7a5f46">Março de 2026</text>
+
+</svg>
