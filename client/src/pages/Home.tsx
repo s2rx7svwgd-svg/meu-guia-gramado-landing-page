@@ -8,40 +8,6 @@ import { ChevronDown } from "lucide-react";
 
 export default function Home() {
   const CHECKOUT_URL = "https://pay.hotmart.com/V105306779Q"; // TROCAR pela URL real do checkout
-  const previewBaseUrl = import.meta.env.BASE_URL;
-
-  const previewPages = [
-    {
-      src: `${previewBaseUrl}previews/01-capa-proposta.svg`,
-      caption: "A proposta do guia",
-      alt: "Capa do PDF Meu Guia Gramado com a proposta da curadoria gastronômica",
-    },
-    {
-      src: `${previewBaseUrl}previews/02-como-usar.svg`,
-      caption: "Como usar na prática",
-      alt: "Página do guia explicando como consultar a curadoria durante a viagem",
-    },
-    {
-      src: `${previewBaseUrl}previews/03-indice-por-momento.svg`,
-      caption: "Escolha por momento da viagem",
-      alt: "Índice do guia organizado por momentos como jantar, família, fondue e cafés",
-    },
-    {
-      src: `${previewBaseUrl}previews/04-jantar-a-dois.svg`,
-      caption: "Opções para jantar a dois",
-      alt: "Página interna do guia com seleção de restaurantes para jantar a dois",
-    },
-    {
-      src: `${previewBaseUrl}previews/05-familia.svg`,
-      caption: "Escolhas para família",
-      alt: "Página interna do guia com escolhas para famílias e grupos",
-    },
-    {
-      src: `${previewBaseUrl}previews/06-fondue.svg`,
-      caption: "Fondue em Gramado",
-      alt: "Página interna do guia com opções de fondue em Gramado",
-    },
-  ];
 
   const handleSeeInside = () => {
     document.getElementById("preview")?.scrollIntoView({
@@ -102,13 +68,7 @@ export default function Home() {
                 asChild
                 className="bg-accent hover:bg-accent/90 text-white font-semibold text-base px-8 py-6"
               >
-                <a
-                  href={CHECKOUT_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Quero receber o guia agora
-                </a>
+                <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">Quero receber o guia agora</a>
               </Button>
 
               <Button
@@ -624,6 +584,7 @@ export default function Home() {
               <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
                 Quero receber o Meu Guia Gramado
               </a>
+              <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">Quero receber o Meu Guia Gramado</a>
             </Button>
 
             <p className="text-lg text-foreground/80 leading-relaxed font-serif">
@@ -646,6 +607,7 @@ export default function Home() {
               <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
                 Quero receber o guia agora
               </a>
+              <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">Quero receber o guia agora</a>
             </Button>
             <p className="text-sm text-white/70 font-serif">
               © 2026 Meu Guia Gramado. Todos os direitos reservados.
