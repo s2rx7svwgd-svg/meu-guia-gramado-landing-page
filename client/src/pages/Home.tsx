@@ -41,6 +41,11 @@ export default function Home() {
       caption: "Fondue em Gramado",
       alt: "Página interna do guia com opções de fondue em Gramado",
     },
+    {
+      src: `${previewBaseUrl}previews/07-cafes-brunch.svg`,
+      caption: "Cafés e brunch",
+      alt: "Página interna do guia com opções de cafés e brunch em Gramado e Canela",
+    },
   ];
 
   const handleSeeInside = () => {
