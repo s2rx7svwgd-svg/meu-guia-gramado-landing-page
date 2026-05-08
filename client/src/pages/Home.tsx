@@ -8,10 +8,40 @@ import { ChevronDown } from "lucide-react";
 
 export default function Home() {
   const CHECKOUT_URL = "https://pay.hotmart.com/V105306779Q"; // TROCAR pela URL real do checkout
+  const previewBaseUrl = import.meta.env.BASE_URL;
 
-  const handleCheckout = () => {
-    window.location.href = CHECKOUT_URL;
-  };
+  const previewPages = [
+    {
+      src: `${previewBaseUrl}previews/01-capa-proposta.svg`,
+      caption: "A proposta do guia",
+      alt: "Capa do PDF Meu Guia Gramado com a proposta da curadoria gastronômica",
+    },
+    {
+      src: `${previewBaseUrl}previews/02-como-usar.svg`,
+      caption: "Como usar na prática",
+      alt: "Página do guia explicando como consultar a curadoria durante a viagem",
+    },
+    {
+      src: `${previewBaseUrl}previews/03-indice-por-momento.svg`,
+      caption: "Escolha por momento da viagem",
+      alt: "Índice do guia organizado por momentos como jantar, família, fondue e cafés",
+    },
+    {
+      src: `${previewBaseUrl}previews/04-jantar-a-dois.svg`,
+      caption: "Opções para jantar a dois",
+      alt: "Página interna do guia com seleção de restaurantes para jantar a dois",
+    },
+    {
+      src: `${previewBaseUrl}previews/05-familia.svg`,
+      caption: "Escolhas para família",
+      alt: "Página interna do guia com escolhas para famílias e grupos",
+    },
+    {
+      src: `${previewBaseUrl}previews/06-fondue.svg`,
+      caption: "Fondue em Gramado",
+      alt: "Página interna do guia com opções de fondue em Gramado",
+    },
+  ];
 
   const handleSeeInside = () => {
     document.getElementById("preview")?.scrollIntoView({
@@ -68,10 +98,12 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 mb-4">
               <Button
                 size="lg"
-                onClick={handleCheckout}
+                asChild
                 className="bg-accent hover:bg-accent/90 text-white font-semibold text-base px-8 py-6"
               >
-                Quero receber o guia agora
+                <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
+                  Quero receber o guia agora
+                </a>
               </Button>
 
               <Button
@@ -208,44 +240,58 @@ export default function Home() {
       </section>
 
       {/* Preview Section */}
-      <section id="preview" className="py-20 md:py-28 bg-background">
+      <section id="preview" className="py-20 md:py-28 bg-gradient-to-b from-white to-background">
         <div className="container mx-auto px-4 md:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
-              Veja como o guia facilita a escolha
-            </h2>
+          <div className="max-w-6xl mx-auto">
+            <div className="max-w-4xl mx-auto text-center mb-12">
+              <span className="inline-flex items-center rounded-full border border-accent/30 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-widest text-accent mb-5">
+                Prévia real do PDF
+              </span>
 
-            <p className="text-lg text-foreground/80 mb-6 leading-relaxed font-serif">
-              O conteúdo foi estruturado para ser fácil de navegar no celular e
-              direto ao ponto.
-            </p>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+                Veja por dentro do guia
+              </h2>
 
-            <p className="text-lg text-foreground/80 mb-12 leading-relaxed font-serif">
-              Em vez de uma lista longa e cansativa, você acessa uma curadoria
-              organizada para encontrar com mais rapidez o tipo de experiência que
-              procura naquele momento.
-            </p>
+              <p className="text-lg text-foreground/80 leading-relaxed font-serif">
+                Um material prático, direto e pensado para consulta no celular durante
+                a viagem — com capa, índice por momento e páginas internas da curadoria.
+              </p>
+            </div>
 
-            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-              {[
-                "Estrutura simples",
-                "Consulta rápida",
-                "Categorias fáceis de entender",
-                "Melhor leitura durante a viagem",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="p-4 bg-white rounded-lg border border-border/50"
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {previewPages.map((item) => (
+                <figure
+                  key={item.src}
+                  className="group rounded-2xl border border-border/60 bg-white p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl"
                 >
-                  <p className="text-foreground/80 font-serif">{item}</p>
-                </div>
+                  <div className="aspect-[9/13] overflow-hidden rounded-xl bg-background">
+                    <img
+                      src={item.src}
+                      alt={item.alt}
+                      loading="lazy"
+                      className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.025]"
+                    />
+                  </div>
+                  <figcaption className="mt-4 flex items-center justify-between gap-3 text-left">
+                    <span className="text-sm font-semibold text-foreground">
+                      {item.caption}
+                    </span>
+                    <span className="h-1.5 w-1.5 rounded-full bg-accent"></span>
+                  </figcaption>
+                </figure>
               ))}
             </div>
 
-            <p className="text-sm text-foreground/60 font-serif">
-              Substitua esta área por prints reais do PDF, do sumário e de algumas
-              páginas internas.
-            </p>
+            <div className="mt-10 text-center">
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-2 border-accent text-accent hover:bg-accent/5 font-semibold text-base px-8 py-6"
+              >
+                <a href="#checkout">Quero acessar o guia completo</a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -537,7 +583,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 md:py-28 bg-background">
+      <section id="checkout" className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-4 md:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
@@ -560,10 +606,12 @@ export default function Home() {
 
             <Button
               size="lg"
-              onClick={handleCheckout}
+              asChild
               className="bg-accent hover:bg-accent/90 text-white font-semibold text-base px-8 py-6 mb-12"
             >
-              Quero receber o Meu Guia Gramado
+              <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
+                Quero receber o Meu Guia Gramado
+              </a>
             </Button>
 
             <p className="text-lg text-foreground/80 leading-relaxed font-serif">
@@ -580,10 +628,12 @@ export default function Home() {
           <div className="text-center">
             <Button
               size="lg"
-              onClick={handleCheckout}
+              asChild
               className="bg-accent hover:bg-accent/90 text-white font-semibold text-base px-8 py-6 mb-8"
             >
-              Quero receber o guia agora
+              <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
+                Quero receber o guia agora
+              </a>
             </Button>
             <p className="text-sm text-white/70 font-serif">
               © 2026 Meu Guia Gramado. Todos os direitos reservados.
