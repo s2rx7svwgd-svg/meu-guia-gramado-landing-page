@@ -49,16 +49,16 @@ export default function Home() {
   const previewBaseUrl = import.meta.env.BASE_URL;
 
   const heroHighlights = [
-    "PDF digital com curadoria gastronomica de Gramado e Canela",
+    "PDF digital com curadoria gastronômica de Gramado e Canela",
     "Consulta simples no celular durante a viagem",
     "Compra e entrega pela Hotmart",
-    "Preco unico de R$ 59",
+    "Preço único de R$ 59",
   ];
 
   const guideBenefits = [
-    "Curadoria organizada por ocasiao e momento da viagem",
-    "Restaurantes, cafes, brunch, fondue, chocolaterias e mais",
-    "Material pensado para abrir rapido no celular",
+    "Curadoria organizada por ocasião e momento da viagem",
+    "Restaurantes, cafés, brunch, fondue, chocolaterias e mais",
+    "Material pensado para abrir rápido no celular",
     "Acesso em PDF logo depois da compra",
   ];
 
@@ -71,33 +71,33 @@ export default function Home() {
     {
       src: `${previewBaseUrl}previews/02-como-usar.svg`,
       caption: "Como consultar durante a viagem",
-      alt: "Pagina real do guia explicando como usar o PDF",
+      alt: "Página real do guia explicando como usar o PDF",
     },
     {
       src: `${previewBaseUrl}previews/03-indice-por-momento.svg`,
-      caption: "Sumario por momento e ocasiao",
-      alt: "Indice do guia com categorias e momentos da viagem",
+      caption: "Sumário por momento e ocasião",
+      alt: "Índice do guia com categorias e momentos da viagem",
     },
     {
       src: `${previewBaseUrl}previews/04-jantar-a-dois.svg`,
       caption: "Categoria: jantar a dois",
-      alt: "Pagina interna do guia com categoria jantar a dois",
+      alt: "Página interna do guia com categoria jantar a dois",
     },
     {
       src: `${previewBaseUrl}previews/07-cafes-brunch.svg`,
-      caption: "Pagina interna: cafes e brunch",
-      alt: "Pagina interna do guia com selecao de cafes e brunch",
+      caption: "Página interna: cafés e brunch",
+      alt: "Página interna do guia com seleção de cafés e brunch",
     },
   ];
 
   const categories = [
-    "Tematicos",
+    "Temáticos",
     "Jantar a dois",
-    "Familia",
+    "Família",
     "Fondue",
     "Italiano",
     "Carnes e parrilla",
-    "Cafes e brunch",
+    "Cafés e brunch",
     "Confeitarias e sobremesas",
     "Chocolaterias",
     "Bares e noite",
@@ -107,42 +107,41 @@ export default function Home() {
     {
       question: "O guia traz uma lista de restaurantes?",
       answer:
-        "Ele vai alem de uma lista solta: organiza os restaurantes e categorias por ocasiao para reduzir a triagem e acelerar a escolha durante a viagem.",
+        "Ele vai além de uma lista solta: organiza restaurantes e categorias por ocasião para reduzir a triagem e acelerar a escolha durante a viagem.",
     },
     {
       question: "Por que pagar se eu posso pesquisar sozinho?",
       answer:
-        "Voce pode pesquisar tudo sozinho. O guia existe para encurtar esse caminho e reunir a curadoria em um material unico, mais rapido de consultar no celular.",
+        "Você pode pesquisar tudo sozinho. O guia existe para encurtar esse caminho e reunir a curadoria em um material único, mais rápido de consultar no celular.",
     },
     {
-      question: "Inclui opcoes em Canela?",
-      answer:
-        "Sim. O conteudo considera opcoes de Gramado e Canela.",
+      question: "Inclui opções em Canela?",
+      answer: "Sim. O conteúdo considera opções de Gramado e Canela.",
     },
     {
       question: "Funciona no celular?",
       answer:
-        "Sim. O produto e um PDF digital pensado para leitura e consulta rapida no celular.",
+        "Sim. O produto é um PDF digital pensado para leitura e consulta rápida no celular.",
     },
     {
       question: "Como eu recebo o guia?",
       answer:
-        "A compra e feita pela Hotmart e o acesso ao PDF acontece pelo fluxo da plataforma, logo apos a confirmacao do pagamento.",
+        "A compra é feita pela Hotmart e o acesso ao PDF acontece pelo fluxo da plataforma, logo após a confirmação do pagamento.",
     },
     {
       question: "A compra tem garantia?",
       answer:
-        "Sim. A compra acontece com garantia pela Hotmart. O prazo e as condicoes aparecem no checkout antes de finalizar.",
+        "Sim. A compra acontece com garantia pela Hotmart. O prazo e as condições aparecem no checkout antes de finalizar.",
     },
     {
-      question: "Existe atualizacao?",
+      question: "Existe atualização?",
       answer:
-        "A versao atual deste material e Maio/2026. Restaurantes podem alterar horarios, precos, cardapios e funcionamento ao longo do tempo.",
+        "A versão atual deste material é Maio/2026. Restaurantes podem alterar horários, preços, cardápios e funcionamento ao longo do tempo.",
     },
     {
       question: "E se eu tiver problema no acesso?",
       answer:
-        "Como a entrega acontece pela Hotmart, problemas de acesso e recuperacao costumam ser tratados pelo fluxo da plataforma e pelos canais informados apos a compra.",
+        "Como a entrega acontece pela Hotmart, problemas de acesso e recuperação costumam ser tratados pelo fluxo da plataforma e pelos canais informados após a compra.",
     },
   ];
 
@@ -176,7 +175,7 @@ export default function Home() {
                 Gramado e Canela
               </span>
               <span className="rounded-full border border-border bg-white/80 px-3 py-2">
-                Curadoria gastronomica
+                Curadoria gastronômica
               </span>
               <span className="rounded-full border border-border bg-white/80 px-3 py-2">
                 {VERSION_LABEL}
@@ -188,9 +187,9 @@ export default function Home() {
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-foreground/88 font-serif md:text-xl">
-              Um guia gastronomico digital em PDF, com curadoria organizada por
-              ocasiao, para consultar no celular e decidir com mais rapidez
-              entre restaurantes, cafes, brunch, fondue e chocolaterias em
+              Um guia gastronômico digital em PDF, com curadoria organizada por
+              ocasião, para consultar no celular e decidir com mais rapidez
+              entre restaurantes, cafés, brunch, fondue e chocolaterias em
               Gramado e Canela.
             </p>
 
@@ -212,12 +211,12 @@ export default function Home() {
               <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
                 <div>
                   <p className="text-sm font-semibold uppercase tracking-[0.14em] text-foreground/65">
-                    Preco atual
+                    Preço atual
                   </p>
                   <p className="mt-1 text-4xl font-bold text-accent">R$ 59</p>
                   <p className="mt-2 text-sm text-foreground/70 font-serif">
                     Compra e entrega pela Hotmart. A garantia aparece no
-                    checkout, com prazo e condicoes informados pela plataforma.
+                    checkout, com prazo e condições informados pela plataforma.
                   </p>
                 </div>
 
@@ -281,25 +280,25 @@ export default function Home() {
             </h2>
 
             <p className="mt-6 text-lg leading-relaxed text-foreground/80 font-serif">
-              Google, Instagram, Tiktok, mapas e listas ajudam. O problema e
-              que, na pratica, a triagem acaba ficando espalhada em muitas abas,
+              Google, Instagram, TikTok, mapas e listas ajudam. O problema é
+              que, na prática, a triagem acaba ficando espalhada em muitas abas,
               muitos links e pouca clareza na hora de decidir onde ir.
             </p>
 
             <p className="mt-5 text-lg leading-relaxed text-foreground/80 font-serif">
-              O Meu Guia Gramado organiza a curadoria por ocasiao e momento da
+              O Meu Guia Gramado organiza a curadoria por ocasião e momento da
               viagem para reduzir esse tempo de triagem. Em vez de reiniciar a
-              busca em cada refeicao, voce abre o PDF e vai direto para a
+              busca em cada refeição, você abre o PDF e vai direto para a
               categoria que faz sentido agora.
             </p>
 
             <div className="mt-8 rounded-2xl border border-border/60 bg-background p-6">
               <h3 className="text-xl font-semibold text-foreground">
-                Microcopy importante
+                Antes de ir, confirme as informações operacionais
               </h3>
               <p className="mt-3 text-base leading-relaxed text-foreground/75 font-serif">
-                Horarios, reservas, cardapios, precos e funcionamento podem
-                mudar. Antes de sair, confirme sempre essas informacoes nos
+                Horários, reservas, cardápios, preços e funcionamento podem
+                mudar. Antes de sair, confirme sempre essas informações nos
                 canais oficiais de cada estabelecimento.
               </p>
             </div>
@@ -312,10 +311,10 @@ export default function Home() {
           <div className="mx-auto grid max-w-5xl gap-10 md:grid-cols-[1.05fr_0.95fr] md:items-center">
             <div>
               <span className="inline-flex items-center rounded-full border border-accent/25 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-accent">
-                O que voce recebe
+                O que você recebe
               </span>
               <h2 className="mt-5 text-3xl font-bold text-foreground md:text-5xl">
-                Um PDF gastronomico para consultar durante a viagem
+                Um PDF gastronômico para consultar durante a viagem
               </h2>
 
               <div className="mt-8 space-y-4">
@@ -333,8 +332,8 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <MapPinned className="mt-1 h-5 w-5 flex-shrink-0 text-accent" />
                   <p className="text-sm leading-relaxed text-foreground/75 font-serif">
-                    {VERSION_LABEL}. Restaurantes podem alterar horarios,
-                    precos, cardapios e funcionamento ao longo do tempo.
+                    {VERSION_LABEL}. Restaurantes podem alterar horários,
+                    preços, cardápios e funcionamento ao longo do tempo.
                   </p>
                 </div>
               </div>
@@ -344,24 +343,20 @@ export default function Home() {
               <div className="rounded-2xl border border-border/50 bg-background p-4">
                 <img
                   src={`${previewBaseUrl}previews/02-como-usar.svg`}
-                  alt="Pagina real do guia explicando como usar o PDF no dia da viagem"
+                  alt="Página real do guia explicando como usar o PDF no dia da viagem"
                   className="mx-auto w-full max-w-[360px] object-contain"
                 />
               </div>
               <p className="mt-4 text-sm leading-relaxed text-foreground/72 font-serif">
-                Preview real do guia mostrando a proposta de uso rapido durante
-                a viagem. Nao ha mockup adicional de celular no repositório alem
-                das paginas reais do PDF.
+                Exemplo real de página do guia, mostrando como o material foi
+                pensado para consulta rápida durante a viagem.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section
-        id="preview"
-        className="bg-white py-18 md:py-24"
-      >
+      <section id="preview" className="bg-white py-18 md:py-24">
         <div className="container mx-auto px-4 md:px-8">
           <div className="mx-auto max-w-6xl">
             <div className="mx-auto max-w-4xl text-center">
@@ -369,11 +364,11 @@ export default function Home() {
                 Ver por dentro antes de comprar
               </span>
               <h2 className="mt-5 text-3xl font-bold text-foreground md:text-5xl">
-                Previa real do guia, usando apenas assets ja existentes
+                Veja páginas reais do guia antes de comprar
               </h2>
               <p className="mt-5 text-lg leading-relaxed text-foreground/80 font-serif">
-                Capa, uso, sumario por momento e paginas internas reais do PDF
-                para voce entender o formato antes de ir ao checkout.
+                Capa, modo de uso, sumário por momento e páginas internas reais
+                do PDF para você entender o formato antes de ir ao checkout.
               </p>
             </div>
 
@@ -407,12 +402,12 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-8">
           <div className="mx-auto max-w-4xl">
             <h2 className="text-3xl font-bold text-center text-foreground md:text-5xl">
-              Curadoria organizada por ocasiao
+              Curadoria organizada por ocasião
             </h2>
 
             <p className="mx-auto mt-5 max-w-3xl text-center text-lg leading-relaxed text-foreground/80 font-serif">
-              Em vez de uma lista unica sem contexto, o guia foi desenhado para
-              ajudar voce a filtrar pelo momento da viagem.
+              Em vez de uma lista única sem contexto, o guia foi desenhado para
+              ajudar você a filtrar pelo momento da viagem.
             </p>
 
             <div className="mt-10 grid gap-4 md:grid-cols-2">
@@ -436,15 +431,15 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-8">
           <div className="mx-auto max-w-4xl">
             <h2 className="text-3xl font-bold text-foreground md:text-5xl">
-              Mais pratico que pesquisar tudo de novo a cada refeicao
+              Mais prático que pesquisar tudo de novo a cada refeição
             </h2>
 
             <div className="mt-8 grid gap-5 md:grid-cols-2">
               {[
-                "Menos tempo comparando links, perfis e listas genericas",
+                "Menos tempo comparando links, perfis e listas genéricas",
                 "Mais clareza para escolher entre Gramado e Canela",
                 "Consulta simples no celular ao longo da viagem",
-                "Curadoria organizada por momento, nao por excesso de links",
+                "Curadoria organizada por momento, não por excesso de links",
               ].map((item) => (
                 <div
                   key={item}
@@ -459,9 +454,9 @@ export default function Home() {
 
             <div className="mt-8 rounded-2xl border border-border/60 bg-background p-6">
               <p className="text-base leading-relaxed text-foreground/80 font-serif">
-                O guia nao substitui sua confirmacao final com o
+                O guia não substitui sua confirmação final com o
                 estabelecimento. Ele reduz o trabalho de triagem e organiza a
-                escolha. A confirmacao de horarios, reservas, cardapios e
+                escolha. A confirmação de horários, reservas, cardápios e
                 funcionamento continua sendo melhor nos canais oficiais.
               </p>
             </div>
@@ -476,7 +471,11 @@ export default function Home() {
               Perguntas frequentes
             </h2>
 
-            <Accordion type="single" collapsible className="mt-10 rounded-2xl border border-border/60 bg-white px-5 md:px-8">
+            <Accordion
+              type="single"
+              collapsible
+              className="mt-10 rounded-2xl border border-border/60 bg-white px-5 md:px-8"
+            >
               {faqItems.map((faq, index) => (
                 <AccordionItem key={faq.question} value={`faq-${index}`}>
                   <AccordionTrigger className="py-5 text-base font-semibold text-foreground hover:no-underline">
@@ -500,23 +499,26 @@ export default function Home() {
             </span>
 
             <h2 className="mt-6 text-3xl font-bold text-foreground md:text-5xl">
-              Se a ideia e decidir onde comer com menos triagem, o guia foi feito
-              para isso
+              Se a ideia é decidir onde comer com menos triagem, o guia foi
+              feito para isso
             </h2>
 
             <p className="mt-5 text-lg leading-relaxed text-foreground/80 font-serif">
               Produto digital em PDF para Gramado e Canela, com curadoria
-              gastronomica organizada para abrir no celular e consultar ao longo
-              da viagem.
+              gastronômica organizada para abrir no celular e consultar ao
+              longo da viagem.
             </p>
 
             <p className="mt-8 text-4xl font-bold text-accent">R$ 59</p>
 
             <div className="mt-4 space-y-2 text-sm text-foreground/72 font-serif">
               <p>{VERSION_LABEL}</p>
-              <p>Compra com garantia pela Hotmart. O prazo e as condicoes aparecem no checkout.</p>
               <p>
-                Restaurantes podem alterar horarios, precos, cardapios e
+                Compra com garantia pela Hotmart. O prazo e as condições
+                aparecem no checkout.
+              </p>
+              <p>
+                Restaurantes podem alterar horários, preços, cardápios e
                 funcionamento.
               </p>
             </div>
@@ -537,7 +539,7 @@ export default function Home() {
       <footer className="bg-foreground py-12 text-white">
         <div className="container mx-auto px-4 text-center md:px-8">
           <p className="text-sm text-white/72 font-serif">
-            Meu Guia Gramado. Produto digital em PDF para consulta gastronomica
+            Meu Guia Gramado. Produto digital em PDF para consulta gastronômica
             em Gramado e Canela.
           </p>
         </div>
